@@ -1,0 +1,1 @@
+A late fee of 5% applies to overdue invoices.

@@ -1,0 +1,3 @@
+Deliverables:
+- Design
+- Code
