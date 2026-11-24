@@ -10,7 +10,7 @@ Upload two files (PDF, DOCX or TXT), click **Compare Documents**, and get:
 - an AI semantic analysis of which changes actually alter the meaning
 - a downloadable report (`.txt`)
 
-**Live app:** `PASTE_YOUR_LIVE_URL_HERE`
+**Live app:** `https://document-comparison-tool-tqttsqccb7wgtd4354fgms.streamlit.app/`
 
 ## How it works
 
