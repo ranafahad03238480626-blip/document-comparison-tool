@@ -10,7 +10,7 @@ Upload two files (PDF, DOCX or TXT), click **Compare Documents**, and get:
 - an AI semantic analysis of which changes actually alter the meaning
 - a downloadable report (`.txt`)
 
-**Live app:** `https://document-comparison-tool-tqttsqccb7wgtd4354fgms.streamlit.app/`
+**Live app:** https://document-comparison-tool-tqttsqccb7wgtd4354fgms.streamlit.app/
 
 ## How it works
 
@@ -66,7 +66,7 @@ python run_tests.py     # needs the API key in .env
 python run_tests.py --offline   # difflib baseline only
 ```
 
-Results (model: `gemini-flash-latest`):
+Results (evaluation run with `gemini-flash-lite-latest`; full expected vs actual table for all 25 cases: [tests/results.md](tests/results.md)):
 
 | Method | Correct |
 |---|---|
@@ -76,6 +76,8 @@ Results (model: `gemini-flash-latest`):
 A plain diff cannot tell rewording ("Kindly" -> "Please") from a real change
 ("will" -> "will not"), so it labels every difference as a change. The AI check
 fixes this. Per-case results are written to `tests/results.md`.
+
+The one case the AI check got wrong is `05_may_to_must` ("may terminate" -> "must terminate"): it was labelled cosmetic, but the change from permission to obligation is a meaning change.
 
 ## Known limitations
 
